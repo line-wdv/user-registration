@@ -9,6 +9,11 @@ if(isset($_POST['submit'])){
   $query ="INSERT INTO tb_users (username, email, password) VALUES ('$username', '$email', '$password')";
 
   $eksekusi = mysqli_query($koneksi, $query);
+  if ($eksekusi) {
+    echo "Data berhasil disimpan";
+  } else {
+    echo "Data gagal disimpan";
+  }
 
 }
 ?>
